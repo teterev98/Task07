@@ -7,7 +7,7 @@ public class Airline {
     public Airline(){
         airplanes = new AirPlane[10];
     }
-    
+
 
 
 }
