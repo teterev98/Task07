@@ -8,7 +8,7 @@ public class Sorter {
     }
     public static Plane[] sortByNumberOfCrewmem(Plane[] planes){
         int lastToSort = planes.length - 1;
-        for (int j =0; j < lastToSort; j++ ){
+        for (int j =0; j < planes.length - 1; j++ ){
             boolean flag = true;
             for (int i = 0 ; i < lastToSort; i++){
                 int next = i + 1;
