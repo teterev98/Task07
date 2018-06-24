@@ -20,7 +20,7 @@ public class Plane {
 
     }
 
-    String getModel() {
+    public String getModel() {
         return model;
     }
 

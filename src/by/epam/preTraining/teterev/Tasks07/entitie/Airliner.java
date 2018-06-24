@@ -2,7 +2,7 @@ package by.epam.preTraining.teterev.Tasks07.entitie;
 
 import java.util.Objects;
 
-public class Airliner  extends Plane implements Passengerable{
+public class Airliner  extends Plane {
 
     private int passengersCapacity;
     private double priceOfTicket;
@@ -12,17 +12,19 @@ public class Airliner  extends Plane implements Passengerable{
 
     }
 
-    public Airliner(String model, int passengersCapacity, double price, int numberOfSeats) {
-        super(model, passengersCapacity);
-        this.priceOfTicket = price;
-        this.passengersCapacity = numberOfSeats;
-    }
-
-    public Airliner(String model, int numberOfCrewMember, int passengersCapacity, double priceOfTicket) {
-        super(model, numberOfCrewMember);
+    public Airliner(String model, int numberOfCrewmen, int passengersCapacity, double priceOfTicket) {
+        super(model, numberOfCrewmen);
         this.passengersCapacity = passengersCapacity;
         this.priceOfTicket = priceOfTicket;
     }
+
+    public Airliner(Plane plane, int passengersCapacity, double priceOfTicket){
+        this.setModel(plane.getModel());
+        this.setNumberOfCrewMen(plane.getNumberOfCrewMen());
+        this.passengersCapacity = passengersCapacity;
+        this.priceOfTicket = priceOfTicket;
+    }
+
 
     public Airliner(Airliner airliner){
         super(airliner.getModel(), airliner.getNumberOfCrewMen());
